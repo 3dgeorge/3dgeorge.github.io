@@ -9,6 +9,64 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/styles.css" />
+
+    <style type="text/css">
+      body {
+        background: url(http://static.tumblr.com/4fdbcf9ea9e87afb4c35641ba030b4f9/uv6gi4d/fq6nm3ueb/tumblr_static_ccaxhrft59ck0sgk88o8gw8ck_2048_v2.jpg);
+      }
+
+      .title-row {
+        padding: 40px 0;
+      }
+
+      .title {
+        color: #ed0505;
+        font-family: '1785 GLC Baskerville', serif, "Helvetica Neue", HelveticaNeue, Arial, sans-serif;
+        font-weight: normal;
+        font-size: 52px;
+        line-height: 1.2;
+        word-wrap: break-word;
+        padding: 30px;
+        text-align: center;
+      }
+
+      .title:hover, .title:active {
+        color: #ed0505;
+        text-decoration: none;
+      }
+
+      .tumblr_posts {
+        list-style: none;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+      }
+
+      .tumblr_post {
+        font-size: 16px;
+        font-family: "Helvetica Neue",HelveticaNeue,Arial,sans-serif;
+        color: #666;
+        background-color: #fff;
+        line-height: 1.6;
+        margin-bottom: 40px;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+
+      .tumblr_video {
+        background-color: #333;
+      }
+
+      .tumblr_caption {
+        padding: 20px;
+      }
+
+      .tumblr_caption p:first {
+        font-size: 18px;
+        padding: 20px 0;
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
 
@@ -26,7 +84,6 @@
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="/">Home</a></li>
-            <li><a href="//cg-tv-review.tumblr.com/">Blog</a></li>
             <li><a href="/team-stream">Team Stream</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -35,13 +92,15 @@
 
     <div class="container">
 
-      <div class="row">
-        <div class="col-md-8">
-          <iframe src="http://www.twitch.tv/cgweed/embed" frameborder="0" scrolling="no" height="378" width="620"></iframe>
+      <div class="row title-row">
+        <div class="col-md-offset-1 col-md-10">
+          <h1><a class="title" href="/">The CG TV Game Review</a></h1>
         </div>
+      </div>
 
-        <div class="col-md-3">
-          <iframe src="http://www.twitch.tv/cgweed/chat?popout=" frameborder="0" scrolling="no" height="500" width="350"></iframe>
+      <div class="row">
+        <div class="col-md-offset-1 col-md-10">
+          <script type="text/javascript" src="http://cg-tv-review.tumblr.com/js"></script>
         </div>
       </div>
 
@@ -49,6 +108,25 @@
 
     <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      var timeout = null;
+      var resize_videos = function() {
+        var width = $('.tumblr_posts').width();
+        $('.tumblr_video').each(function(video_container) {
+          $video = $(this);
+          $video.find('iframe')
+            .height(394)
+            .width(width)
+            .attr('frameborder', 0)
+            .prop('allowfullscreen')
+        });
+      };
+      $(window).resize(function(event) {
+        if (timeout) clearTimeout(timeout);
+        timeout = setTimeout(resize_videos, 500);
+      })
+      $(function() { resize_videos(); })
+    </script>
 
   </body>
 </html>
