@@ -7,28 +7,20 @@
 
     <title>BulletPoint Gaming</title>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
 
     <style type="text/css">
-      @font-face {
-        font-family: 'Capture it';
-        src: url('fonts/Capture\ it.ttf');
-          font-size: 28pt;
+      body {
+        background-color: #000;
+        overflow: hidden;
       }
 
-      body {
-        letter-spacing: 2px;
-        background-color: #000;
-        font-family: 'Capture it', Helvetica, sans-serif;
-      }
-      .main-image {
-        background-image: url(img/Fat_man_blank.jpg);
-        background-size: 900px 600px;
-        height: 600px;
-      }
-      .main-image .heading {
-        font-size: 56pt;
+      .blog-container {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
       }
     </style>
   </head>
@@ -47,23 +39,33 @@
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="/team-stream">Team Stream</a></li>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/calendar">Calendar</a></li>
+            <li class="active"><a href="/blog">Blog</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
 
-    <div class="container calendar-container">
-      <div class="col-xs-12 main-image">
-        <p class="heading">CG's 3d Factory</p>
-      </div>
-
+    <div class="container blog-container">
+      <iframe src="http://blog.bulletpointgaming.com" width="100%" height="100%" frameborder="no"></iframe>
     </div><!-- /.container -->
 
-    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      var timeout = null;
+      var resize_blog = function() {
+        var width = $(window).width();
+        var height = $(window).height() - 20;
+        $('iframe').width(width).height(height);
+      };
+      $(window).resize(function(event) {
+        if (timeout) clearTimeout(timeout);
+        timeout = setTimeout(resize_blog, 500);
+      })
+      $(function() { resize_blog(); })
+    </script>
+
   </body>
 </html>
