@@ -1,0 +1,93 @@
+.rotate {
+    /* Safari */
+    -webkit-transform: rotate(-45deg);
+    /* Firefox */
+    -moz-transform: rotate(-45deg);
+    /* IE */
+    -ms-transform: rotate(-45deg);
+    /* Opera */
+    -o-transform: rotate(-45deg);
+    /* Internet Explorer */
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+.product-row {
+    margin-top: 50px;
+    padding-top: 50px;
+}
+
+.bannerImage a {
+    width: 100%;
+}
+
+.bannerImage img {
+    height: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/* Thumbnail Box */
+.caption {
+    height: 140px;
+    width: 100%;
+    margin: 20px 0px;
+    padding: 20px;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+
+.caption .span4, .caption .span8 {
+    padding: 0px 20px;
+}
+
+.caption .span4 {
+    border-right: 1px dotted #CCCCCC;
+}
+
+.caption h3 {
+    line-height: 2rem;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+}
+
+.caption p {
+    font-size: 10pt;
+    line-height: 1.6em;
+}
+
+.carousel-control {
+    top: 33%;
+    left: 15px;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    font-size: 60px;
+    font-weight: 100;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+    background: #222;
+    border: 3px solid #fff;
+    -webkit-border-radius: 23px;
+    -moz-border-radius: 23px;
+    border-radius: 23px;
+    opacity: .5;
+    filter: alpha(opacity=50);
+}
+
+.product-description {
+    height: 600px;
+    font-size: 14pt;
+}
+
+.product-description .tag-line {
+    font-size: 36pt;
+    letter-spacing: 2px;
+    position: relative;
+    top: 0;
+    left: 0;
+}

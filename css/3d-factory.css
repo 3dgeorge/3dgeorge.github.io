@@ -1,0 +1,17 @@
+.cap-it {
+    font-family: 'Capture it', Helvetica, sans-serif;
+}
+
+.banner-image {
+    background-image: url(../img/banner.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachement: fixed;
+    background-size: 900px 200px;
+    color: #fff;
+    height: 200px;
+}
+
+.banner-image .heading {
+    font-size: 64pt;
+}

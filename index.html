@@ -9,28 +9,11 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/3d-factory.css" />
+    <link rel="stylesheet" href="css/3d-factory-product.css" />
 
     <style type="text/css">
-      @font-face {
-        font-family: 'Capture it';
-        src: url('fonts/Capture\ it.ttf');
-          font-size: 28pt;
-      }
-
-      body {
-        letter-spacing: 2px;
-        background-color: #000;
-        font-family: 'Capture it', Helvetica, sans-serif;
-      }
-      .main-image {
-        background-image: url(img/Fat_man_blank.jpg);
-        background-size: 900px 600px;
-        color: #fff;
-        height: 600px;
-      }
-      .main-image .heading {
-        font-size: 56pt;
-      }
     </style>
   </head>
   <body>
@@ -51,20 +34,181 @@
             <li class="active"><a href="/">Home</a></li>
             <li><a href="/team-stream">Team Stream</a></li>
             <li><a href="/blog">Blog</a></li>
+            <li><a href="/list">Mailing List</a></li>
             <li><a href="/calendar">Calendar</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
 
-    <div class="container calendar-container">
-      <div class="col-xs-12 main-image">
-        <p class="heading">CG's 3d Factory</p>
+    <div class="container">
+
+      <div class="row .cap-it">
+        <div class="col-md-12 banner-image">
+          <p class="heading cap-it">CG's 3d Factory</p>
+        </div>
+      </div>
+
+      <div class="row product-row">
+
+        <div class="col-md-7">
+          <div class="product-container">
+            <div id="myCarousel" class="carousel slide">
+
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+
+                <div class="item active">
+                  <div class="bannerImage">
+                    <img src="img/fat-man-large.jpg" alt="The Fat-man" />
+                  </div>
+
+                  <div class="caption row-fluid">
+                    <div class="col-md-4">
+                      <h3>The Fatman</h3>
+                    </div>
+                      <div class="col-md-8">
+                      <p>Large version of the print and paint model.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <div class="bannerImage">
+                    <img src="img/fat-man-large-right.jpg" alt="Fat-man right profile" />
+                  </div>
+
+                  <div class="caption row-fluid">
+                    <div class="col-md-4">
+                      <h3>The Fatman</h3>
+                    </div>
+                    <div class="col-md-8">
+                      <p>Right profile of the print and paint model.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <div class="bannerImage">
+                    <img src="img/fat-man-large-left.jpg" alt="Fat-man left profile" />
+                  </div>
+
+                  <div class="caption row-fluid">
+                    <div class="col-md-4">
+                      <h3>The Fatman</h3>
+                    </div>
+                    <div class="col-md-8">
+                      <p>Left profile of the print and paint model.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <div class="bannerImage">
+                    <img src="img/fat-man-combo.jpg" alt="Fat man combo profile" />
+                  </div>
+
+                  <div class="caption row-fluid">
+                    <div class="col-md-4">
+                      <h3>The Fatman</h3>
+                    </div>
+                    <div class="col-md-8">
+                      <p>Combo of large and small of the print and paint model.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <div class="bannerImage">
+                    <img src="img/fat-man-large-painted.jpg" alt="Fat man painted" />
+                  </div>
+
+                  <div class="caption row-fluid">
+                    <div class="col-md-4">
+                      <h3>The Fatman</h3>
+                    </div>
+                    <div class="col-md-8">
+                      <p>Fully painted of the print and paint model.</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="control-box">
+                <a data-slide="prev" href="#myCarousel" class="carousel-control left">&lsaquo;</a>
+                <a data-slide="next" href="#myCarousel" class="carousel-control right">&rsaquo;</a>
+              </div><!-- /.control-box -->
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-md-offset-1">
+          <div class="product-description">
+            <p class="cap-it tag-line">U-PAINT<p>
+            <p>Hefty Heros Fatman</p>
+            <p>Figure is available in both smooth and raw finish. Raw format is straight off the pinter while the smooth format has xtc-3d coating.</p>
+            <p>Large figure is 5 3/4" high</p>
+            <p>Small figure is 3 3/4" high</p>
+            <p>Free shipping in the USA</p>
+          </div>
+
+          <div class="purchase">
+            <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+              <input type="hidden" name="cmd" value="_s-xclick">
+              <input type="hidden" name="hosted_button_id" value="ACY2QNVLVHFPL">
+              <table>
+                <tr><td><input type="hidden" name="on0" value="Select size & style">Select size & style</td></tr><tr><td><select name="os0">
+                      <option value="Large Fat-Man Smooth Finish">Large Fat-Man Smooth Finish $75.00 USD</option>
+                      <option value="Large Fat-Man Raw Finish">Large Fat-Man Raw Finish $65.00 USD</option>
+                      <option value="Small Fat-Man Smooth Finish">Small Fat-Man Smooth Finish $35.00 USD</option>
+                      <option value="Small Fat-Man Raw Finish">Small Fat-Man Raw Finish $25.00 USD</option>
+                      <option value="Combo Large+Small Fat-Man Smooth Finish">Combo Large+Small Fat-Man Smooth Finish $100.00 USD</option>
+                      <option value="Combo Large+Small Fat-Man Raw Finish">Combo Large+Small Fat-Man Raw Finish $80.00 USD</option>
+                      <option value="STL File Download Fat-Man">STL File Download Fat-Man $10.00 USD</option>
+                    </select> </td></tr>
+                    <tr><td><input type="hidden" name="on1" value="Base color">Base color</td></tr><tr><td><select name="os1">
+                          <option value="Red">Red </option>
+                          <option value="Orange">Orange </option>
+                          <option value="Yellow">Yellow </option>
+                          <option value="Green">Green </option>
+                          <option value="Blue">Blue </option>
+                          <option value="Purple">Purple </option>
+                          <option value="Grey">Grey </option>
+                          <option value="White">White </option>
+                          <option value="Black">Black </option>
+                        </select> </td></tr>
+              </table>
+              <input type="hidden" name="currency_code" value="USD">
+              <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+              <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            </form>
+          </div>
+        </div>
       </div>
 
     </div><!-- /.container -->
 
-    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <footer class="footer">
+      <div class="container">
+        <p>
+        <a href="//www.twitter.com/gameinsomniacs">Twitter</a>
+        <a href="//www.facebook.com/CG.TV.vid.gamers">Facebook</a>
+        <a href="//www.youtube.com/channel/UC3CnElhRhsV4O40hWNE-raQ">Twitch</a>
+        <a href="//www.twitch.tv/cgweed">Youtube</a>
+        <a href="/list">Mailing list</a>
+        <p>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('.carousel').carousel({
+          interval: 6000
+        });
+      });
+    </script>
   </body>
 </html>
